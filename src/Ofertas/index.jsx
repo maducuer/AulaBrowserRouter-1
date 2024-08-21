@@ -4,8 +4,9 @@ import Footer from "../components/Footer";
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export default function Home() {
+export default function ofertas( ){
 
+    
     const [listaProdutos, setProdutos] = useState([
         {id: 1, nome: 'Nike', preco: 'R$200,00'},
         {id: 2, nome: 'Olympikus', preco: 'R$300,00'},
@@ -39,10 +40,10 @@ const removerPedido = (id) => {
 
     return(
         <>
-        <Header titulo={"Volêi"}/>
+        <Header titulo={"Ofertas"}/>
         
     <div>
-            <h1>Tênis Esportivos</h1>
+            <h1>Ofertas da semana</h1>
 
             {
               listaProdutos.map((produto) =>
@@ -75,10 +76,13 @@ const removerPedido = (id) => {
         >
 
 <div>
-    <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/CentauroVC/Prim/deskp.png"/>
+    <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/OfertasDiarias/08-Agosto/2108/desk1.png"/>
 </div>
 <div>
-   <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/CentauroVC/Prim/nike2-desk.png"/>
+   <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/OfertasDiarias/08-Agosto/2108/desk2.png"/>
+</div>
+<div>
+    <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/OfertasDiarias/08-Agosto/2108/desk3.png"/>
 </div>
 
         </Carousel>

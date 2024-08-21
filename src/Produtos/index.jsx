@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export default function Home() {
+export default function Produtos() {
 
     const [listaProdutos, setProdutos] = useState([
         {id: 1, nome: 'Nike', preco: 'R$200,00'},
@@ -75,10 +75,16 @@ const removerPedido = (id) => {
         >
 
 <div>
-    <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/CentauroVC/Prim/deskp.png"/>
+    <img src="https://pittol.vteximg.com.br/arquivos/ids/334681-330-457/3023768-1.jpg?v=638279878964200000"/>
 </div>
 <div>
-   <img src="https://imgcentauro-a.akamaihd.net/05_Campanhas/2024/CentauroVC/Prim/nike2-desk.png"/>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrQWedLR9yUnaZuVjBog1OZuRndf6kPAIieA&s"/>
+</div>
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisn6YDjrs1jBqLzeVOsv_zhk38eLKoVrZVw&s"/>
+</div>
+<div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQga4PIRl8FNVt2l-N8QrSxC3YJElP9GkjFbA&s"/>
 </div>
 
         </Carousel>

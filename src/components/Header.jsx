@@ -1,5 +1,5 @@
 export default function Header(){
-    return
+    return(
     <header>
 
         <Link to= "/home">
@@ -15,4 +15,5 @@ export default function Header(){
         </Link>
 
     </header>
+    );
 }
