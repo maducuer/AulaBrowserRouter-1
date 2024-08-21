@@ -4,15 +4,24 @@ import Footer from "../components/Footer";
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export default function ofertas( ){
+export default function Ofertas( ){
 
     
     const [listaProdutos, setProdutos] = useState([
-        {id: 1, nome: 'Nike', preco: 'R$200,00'},
-        {id: 2, nome: 'Olympikus', preco: 'R$300,00'},
-        {id: 3, nome: 'Adidas', preco: 'R$400,00'},
-        {id: 4, nome: 'Fila', preco: 'R$500,00'},
-        {id: 5, nome: 'Jordan', preco: 'R$600,00'}
+        {id: 1, nome: 'Nike', preco: 'R$200,00',
+     imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKaU4BBr_eEHQ3jfzryvNqjkqubNZ5Mp_5Q&s"
+    },
+        {id: 2, nome: 'Olympikus', preco: 'R$300,00',
+    imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl3YggKNEHb2xe-Ndk3B2L6GzQZiXJNOgrBw&s"
+    },
+        {id: 3, nome: 'Adidas', preco: 'R$400,00',
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU7LCxY3m8yJALlq2BgZrhf1KfUMGR-tlGXw&s"
+    },
+        {id: 4, nome: 'Fila', preco: 'R$500,00',
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6YqtttadSXB9t6yz6oVuBDPLyNKu7zeDIw&s"
+    },
+        {id: 5, nome: 'Jordan', preco: 'R$600,00',
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutNAuiCqn7heFJ8s9OvLS0O80sT5n6fDIvA&s"}
     ]);
 
 const [listaPedidos, setListaPedidos] = useState([]);
@@ -40,7 +49,7 @@ const removerPedido = (id) => {
 
     return(
         <>
-        <Header titulo={"Ofertas"}/>
+        <Header/>
         
     <div>
             <h1>Ofertas da semana</h1>
@@ -49,6 +58,7 @@ const removerPedido = (id) => {
               listaProdutos.map((produto) =>
               <div key={produto.id}> 
               <p>{produto.nome}</p>
+              <img src={produto.imagem}></img>
               <p>{produto.preco}</p>
               <button onClick={()=> adicionarItemPedidos(produto)}>Selecionar</button>
               </div>
