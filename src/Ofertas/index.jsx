@@ -1,6 +1,8 @@
 import {useState} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../global.css";
+import ListaProdutos from "../components/ListarProdutos";
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -8,44 +10,24 @@ export default function Ofertas( ){
 
     
     const [listaProdutos, setProdutos] = useState([
-        {id: 1, nome: 'Nike', preco: 'R$200,00',
-     imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKaU4BBr_eEHQ3jfzryvNqjkqubNZ5Mp_5Q&s"
+        {id: 1, nome: 'Vestido Grecia', preco2: ' De: R$369,99', preco: 'Para: R$484,00',
+     imagem:"https://fiozato.com/cdn/shop/files/VestidoGreciaFiozato01_1500x.png?v=1700762598"
     },
-        {id: 2, nome: 'Olympikus', preco: 'R$300,00',
-    imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl3YggKNEHb2xe-Ndk3B2L6GzQZiXJNOgrBw&s"
+        {id: 2, nome: 'Saia Candy',preco2: ' De: R$259,99', preco: 'Para: R$179,00',
+    imagem:"https://fiozato.com/cdn/shop/files/SaiaCandyFiozato01_1500x.png?v=1696449936"
     },
-        {id: 3, nome: 'Adidas', preco: 'R$400,00',
-        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU7LCxY3m8yJALlq2BgZrhf1KfUMGR-tlGXw&s"
+        {id: 3, nome: 'Vestido Francês',preco2: ' De: R$209,00', preco: 'Para: R$197,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoFrancesFiozato01_1500x.png?v=1700753014"
     },
-        {id: 4, nome: 'Fila', preco: 'R$500,00',
-        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6YqtttadSXB9t6yz6oVuBDPLyNKu7zeDIw&s"
+        {id: 4, nome: 'Saia Bright', preco2: ' De: R$229,99', preco: 'Para: R$184,00',
+        imagem:"https://fiozato.com/cdn/shop/files/SaiaBrightFiozato01_1500x.png?v=1707372858"
     },
-        {id: 5, nome: 'Jordan', preco: 'R$600,00',
-        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutNAuiCqn7heFJ8s9OvLS0O80sT5n6fDIvA&s"}
+        {id: 5, nome: 'Vestido Espanha', preco2: ' De: R$389,99', preco: 'Para: R$224,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoEspanhaFiozato01_1500x.png?v=1696736608"
+    }
     ]);
 
-const [listaPedidos, setListaPedidos] = useState([]);
 
-const adicionarItemPedidos = (objeto) => {
-    setListaPedidos([...listaPedidos,objeto])
-}
-
-const removerPedido = (id) => {
-    let remover= false;
-    let listaAux = listaPedidos.filter((produto) =>{
-        if (remover == false){
-            if (produto.id !== id ){
-                return produto
-            }else{
-                remover = true;
-                return null
-            }
-        }else{
-            return produto
-        }
-    });
-    setListaPedidos(listaAux);
-}
 
     return(
         <>
@@ -54,25 +36,7 @@ const removerPedido = (id) => {
     <div>
             <h1>Ofertas da semana</h1>
 
-            {
-              listaProdutos.map((produto) =>
-              <div key={produto.id}> 
-              <p>{produto.nome}</p>
-              <img src={produto.imagem}></img>
-              <p>{produto.preco}</p>
-              <button onClick={()=> adicionarItemPedidos(produto)}>Selecionar</button>
-              </div>
-              )
-            }
-{
-    listaPedidos.map((produto)=>
-        <div key={produto.id}>
-            <p>{produto.nome}</p>
-            <p>{produto.preco}</p>
-            <button onClick={()=> removerPedido(produto.id)}>Remover</button>
-        </div>
-    )
-}
+          
 </div>
 <Footer desenvolvedor={"Madu"}/>
         
@@ -96,6 +60,8 @@ const removerPedido = (id) => {
 </div>
 
         </Carousel>
+
+        <ListaProdutos listaProdutos={listaProdutos} /> 
         </>
     );
 }
