@@ -31,15 +31,16 @@ const removerPedido = (id) => {
 
     return(
 <>
-        <Header titulo={"Tênis Esportivos"}/>
-        
-    <div>
-            <h1>Tênis Esportivos</h1>
+        <Header titulo={"Vestidos"}/>
+        <div>
+            <h1>Coleções</h1>
+        </div>
+   
 
             {
               listaProdutos.map((produto) =>
               <div key={produto.id}> 
-              <p>{produto.nome}</p>
+              <p id="nome">{produto.nome}</p>
               <img src={produto.imagem}/>
               <p> {produto.preco}</p>
               <p id="precoriscado">{produto.preco2}</p>
@@ -59,9 +60,6 @@ const removerPedido = (id) => {
 }
 
 
-</div>
-<Footer desenvolvedor={"Madu"}/>
-        
 </>
     );
 }

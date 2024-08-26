@@ -3,6 +3,7 @@ import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../global.css";
 
 export default function Home() {
 
@@ -42,7 +43,7 @@ const removerPedido = (id) => {
         <Header/>
         
     <div>
-            <h1>Tênis Esportivos</h1>
+            <h1>Em Alta</h1>
 
             {
               listaProdutos.map((produto) =>
@@ -62,9 +63,7 @@ const removerPedido = (id) => {
         </div>
     )
 }
-</div>
-<Footer desenvolvedor={"Madu"}/>
-        
+
         <Carousel
         infiniteLoop
         useKeyboardArrows
@@ -82,6 +81,9 @@ const removerPedido = (id) => {
 </div>
 
         </Carousel>
+
+        </div>
+<Footer desenvolvedor={"© 2024, FIOZATO | CNPJ: 47.604.685/0001-49, Vlf Company Negocios Digitais LTDA"}/>
         </>
     );
 }

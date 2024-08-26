@@ -1,93 +1,45 @@
 import {useState} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {Carousel} from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "../global.css";
+import ListaProdutos from "../components/ListarProdutos";
 
 export default function Produtos() {
 
+    
+    <div>
+            <h1>gernhfg</h1>
+
+         
+
+        </div>
+
     const [listaProdutos, setProdutos] = useState([
-        {id: 1, nome: 'Nike', preco: 'R$200,00'},
-        {id: 2, nome: 'Olympikus', preco: 'R$300,00'},
-        {id: 3, nome: 'Adidas', preco: 'R$400,00'},
-        {id: 4, nome: 'Fila', preco: 'R$500,00'},
-        {id: 5, nome: 'Jordan', preco: 'R$600,00'}
+        {id: 1, nome: 'Vestido Grecia',preco: 'Para: R$484,00',
+     imagem:"https://fiozato.com/cdn/shop/files/VestidoGreciaFiozato01_1500x.png?v=1700762598"
+    },
+        {id: 2, nome: 'Saia Candy', preco: 'Para: R$179,00',
+    imagem:"https://fiozato.com/cdn/shop/files/SaiaCandyFiozato01_1500x.png?v=1696449936"
+    },
+        {id: 3, nome: 'Vestido Francês', preco: 'Para: R$197,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoFrancesFiozato01_1500x.png?v=1700753014"
+    },
+        {id: 4, nome: 'Saia Bright', preco: 'Para: R$184,00',
+        imagem:"https://fiozato.com/cdn/shop/files/SaiaBrightFiozato01_1500x.png?v=1707372858"
+    },
+        {id: 5, nome: 'Vestido Espanha', preco2: ' De: R$389,99', preco: 'Para: R$224,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoEspanhaFiozato01_1500x.png?v=1696736608"
+    }
     ]);
-
-const [listaPedidos, setListaPedidos] = useState([]);
-
-const adicionarItemPedidos = (objeto) => {
-    setListaPedidos([...listaPedidos,objeto])
-}
-
-const removerPedido = (id) => {
-    let remover= false;
-    let listaAux = listaPedidos.filter((produto) =>{
-        if (remover == false){
-            if (produto.id !== id ){
-                return produto
-            }else{
-                remover = true;
-                return null
-            }
-        }else{
-            return produto
-        }
-    });
-    setListaPedidos(listaAux);
-}
 
     return(
         <>
-        <Header titulo={"Volêi"}/>
         
-    <div>
-            <h1>Tênis Esportivos</h1>
-
-            {
-              listaProdutos.map((produto) =>
-              <div key={produto.id}> 
-              <p>{produto.nome}</p>
-              <p>{produto.preco}</p>
-              <button onClick={()=> adicionarItemPedidos(produto)}>Selecionar</button>
-              </div>
-              )
-            }
-{
-    listaPedidos.map((produto)=>
-        <div key={produto.id}>
-            <p>{produto.nome}</p>
-            <p>{produto.preco}</p>
-            <button onClick={()=> removerPedido(produto.id)}>Remover</button>
-        </div>
-    )
-}
-</div>
-<Footer desenvolvedor={"Madu"}/>
         
-        <Carousel
-        infiniteLoop
-        useKeyboardArrows
-        autoPlay
-        showArrows={true}
-        showStatus={false}
-        showThumbs={false}
-        >
+    
+        <ListaProdutos listaProdutos={listaProdutos} /> 
 
-<div>
-    <img src="https://pittol.vteximg.com.br/arquivos/ids/334681-330-457/3023768-1.jpg?v=638279878964200000"/>
-</div>
-<div>
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrQWedLR9yUnaZuVjBog1OZuRndf6kPAIieA&s"/>
-</div>
-<div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisn6YDjrs1jBqLzeVOsv_zhk38eLKoVrZVw&s"/>
-</div>
-<div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQga4PIRl8FNVt2l-N8QrSxC3YJElP9GkjFbA&s"/>
-</div>
-
-        </Carousel>
+<Footer desenvolvedor={"© 2024, FIOZATO | CNPJ: 47.604.685/0001-49, Vlf Company Negocios Digitais LTDA"}/>
         </>
     );
 }

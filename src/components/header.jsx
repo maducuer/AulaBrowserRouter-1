@@ -4,7 +4,7 @@ export default function Header(){
     return(
     <header>
 
-        <Link to= "/home">
+        <Link to= "/">
         <p>Home</p>
         </Link>
 
