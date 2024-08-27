@@ -15,21 +15,51 @@ export default function Produtos() {
         </div>
 
     const [listaProdutos, setProdutos] = useState([
-        {id: 1, nome: 'Vestido Grecia',preco: 'Para: R$484,00',
-     imagem:"https://fiozato.com/cdn/shop/files/VestidoGreciaFiozato01_1500x.png?v=1700762598"
+        {id: 16, nome: 'Vestido Classic',preco: 'R$ 359,00',
+     imagem:"https://fiozato.com/cdn/shop/files/VestidoClassicFiozato01_1500x.png?v=1697645207"
     },
-        {id: 2, nome: 'Saia Candy', preco: 'Para: R$179,00',
-    imagem:"https://fiozato.com/cdn/shop/files/SaiaCandyFiozato01_1500x.png?v=1696449936"
+        {id: 17, nome: 'Vestido Pedraria', preco: 'R$ 257,00',
+    imagem:"https://fiozato.com/cdn/shop/files/VestidoPedrariaFiozato01_1500x.png?v=1700100975"
     },
-        {id: 3, nome: 'Vestido Francês', preco: 'Para: R$197,00',
-        imagem:"https://fiozato.com/cdn/shop/files/VestidoFrancesFiozato01_1500x.png?v=1700753014"
+        {id: 18, nome: 'Vestido Lux', preco: 'R$ 239,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoLuxFiozato01_1500x.png?v=1699073018"
     },
-        {id: 4, nome: 'Saia Bright', preco: 'Para: R$184,00',
-        imagem:"https://fiozato.com/cdn/shop/files/SaiaBrightFiozato01_1500x.png?v=1707372858"
+        {id: 19, nome: 'Top Party', preco: 'R$ 189,00',
+        imagem:"https://fiozato.com/cdn/shop/files/TopPartyFiozato01_1500x.png?v=1702953275"
     },
-        {id: 5, nome: 'Vestido Espanha', preco2: ' De: R$389,99', preco: 'Para: R$224,00',
-        imagem:"https://fiozato.com/cdn/shop/files/VestidoEspanhaFiozato01_1500x.png?v=1696736608"
-    }
+        {id: 20, nome: 'Short Saia Envelope',  preco: 'R$ 189,00',
+        imagem:"https://fiozato.com/cdn/shop/files/ShortSaiaEnvelopeFiozato01_1500x.png?v=1695937156"
+    },
+    {id: 21, nome: 'Top Artistic',preco: 'R$ 229,00',
+        imagem:"https://fiozato.com/cdn/shop/files/TopArtisticFiozato01_1500x.png?v=1716576131"
+       },
+           {id: 22, nome: 'Body Montmartre', preco: 'R$ 239,00',
+       imagem:"https://fiozato.com/cdn/shop/files/BodyMontmartreFiozato01_1500x.png?v=1718397969"
+       },
+           {id: 23, nome: 'Short Saia Hypnotic', preco: 'R$ 349,00',
+           imagem:"https://fiozato.com/cdn/shop/files/ShortSaiaHypnoticFiozato01_1500x.png?v=1722553211"
+       },
+           {id: 24, nome: 'Conjunto Grecia', preco: 'R$ 389,00',
+           imagem:"https://fiozato.com/cdn/shop/files/ConjuntoGreciaFiozato01_1500x.png?v=1701148836"
+       },
+           {id: 25, nome: 'Saia Explorer', preco: 'R$ 269,00',
+           imagem:"https://fiozato.com/cdn/shop/files/SaiaExplorerFiozato01_1500x.png?v=1712181628"
+       },
+       {id: 26, nome: 'Vestido Spring',preco: 'R$ 259,00',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoSpringFiozato01_1500x.png?v=1710388222"
+       },
+           {id: 27, nome: 'Top Article', preco: 'R$ 389,00',
+       imagem:"https://fiozato.com/cdn/shop/files/TopArticleFiozato02_1500x.png?v=1716320356"
+       },
+           {id: 28, nome: 'Calça de Linho', preco: 'R$ 199,00',
+           imagem:"https://fiozato.com/cdn/shop/files/CalcaSoltaFiozato01_1500x.png?v=1712256529"
+       },
+           {id: 29, nome: 'Vestido Pérola', preco: 'R$ 279,00',
+           imagem:"https://fiozato.com/cdn/shop/files/VestidoPerolaFiozato01_1500x.png?v=1700717521"
+       },
+           {id: 30, nome: 'Corset String', preco: 'R$ 189,00',
+           imagem:"https://fiozato.com/cdn/shop/files/CorsetStringFiozato01_1500x.png?v=1716230123"
+       }
     ]);
 
     return(

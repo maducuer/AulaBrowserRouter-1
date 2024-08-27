@@ -40,7 +40,7 @@ const removerPedido = (id) => {
             {
               listaProdutos.map((produto) =>
               <div key={produto.id}> 
-              <p id="nome">{produto.nome}</p>
+              <p id="nomeproduto">{produto.nome}</p>
               <img src={produto.imagem}/>
               <p> {produto.preco}</p>
               <p id="precoriscado">{produto.preco2}</p>
