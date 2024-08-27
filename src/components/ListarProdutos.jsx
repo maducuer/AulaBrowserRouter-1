@@ -44,6 +44,8 @@ const removerPedido = (id) => {
               <img src={produto.imagem}/>
               <p> {produto.preco}</p>
               <p id="precoriscado">{produto.preco2}</p>
+              <p>{produto.cor}</p>
+              <p>{produto.tamanho}</p>
               <button onClick={()=> adicionarItemPedidos(produto)}>Selecionar</button>
               </div>
               )

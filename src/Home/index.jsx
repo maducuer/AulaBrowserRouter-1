@@ -10,20 +10,20 @@ export default function Home() {
 
     
     const [listaProdutos, setProdutos] = useState([
-        {id: 1, nome: 'Vestido Grecia', preco2: '  R$369,99', 
-     imagem:""
+        {id: 1, nome: 'Vestido Caribe', preco: 'R$389,99', cor: 'laranja', tamanho: 'G',
+     imagem:"https://fiozato.com/cdn/shop/files/VestidoCaribeFiozato01.png?v=1701975381"
     },
-        {id: 2, nome: 'Saia Candy',preco: ' R$259,99', 
-    imagem:""
+        {id: 2, nome: 'Vestido Espanha Verano',preco: 'R$ 387,00', cor: 'vermelho', tamanho: 'GG',
+    imagem:"https://fiozato.com/cdn/shop/files/VestidoEspanhaVeranoFiozato01_1500x.png?v=1696524736"
     },
-        {id: 3, nome: 'Vestido Francês',preco: ' R$209,00', 
-        imagem:""
+        {id: 3, nome: 'Vestido Lonely',preco: ' R$269,00', cor: 'preto', tamanho: 'M',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoLonelyFiozato01_1500x.png?v=1697669749"
     },
-        {id: 4, nome: 'Saia Bright', preco: ' R$229,99', 
-        imagem:""
+        {id: 4, nome: 'Vestido Água de Coco', preco: ' R$419,99', cor: 'azul', tamanho: 'P',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoMintFiozato01_1500x.png?v=1705187073"
     },
-        {id: 5, nome: 'Vestido Espanha', preco: ' R$389,99',
-        imagem:""
+        {id: 5, nome: 'Vestido Swan', preco: ' R$229,99', cor: 'preto', tamanho: 'G',
+        imagem:"https://fiozato.com/cdn/shop/files/VestidoSwanFiozato01_1500x.png?v=1697668318"
     }
     ]);
 
@@ -50,7 +50,7 @@ export default function Home() {
     <img src="https://fiozato.com/cdn/shop/files/bwinter02pc_1.png?v=1722877341&width=1400"/>
 </div>
 <div>
-   <img src=""/>
+   <img src="https://marketplace.canva.com/EAGH4TduVaQ/1/0/1600w/canva-banner-moda-feminina-loja-online-nova-cole%C3%A7%C3%A3o-elegante-8RB5bpSapWc.jpg"/>
 </div>
 
         </Carousel>
